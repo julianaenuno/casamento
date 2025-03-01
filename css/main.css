@@ -82,17 +82,6 @@ body {
   list-style: none;
   padding-left: 0; }
 
-/* Couple Friends Style  */
-.ww-couple-friends .carousel {
-  padding: 40px 0; }
-
-.ww-couple-friends .carousel-indicators {
-  bottom: 0px; }
-  .ww-couple-friends .carousel-indicators li {
-    background-color: #6c757d; }
-  .ww-couple-friends .carousel-indicators .active {
-    background-color: #f58a77; }
-
 /* Photo Gallery Style */
 .ww-photo-gallery .ww-category-filter a {
   display: inline-block;
@@ -161,22 +150,44 @@ body {
   left: 0;
   top: 0; }
 
-/* Footer Style */
-.ww-footer a.credit {
-  color: inherit;
-  border-bottom: 1px dashed;
-  text-decoration: none;
-  cursor: pointer; }
-
 /* Common Style */
 .ww-title {
-  font-family: "Great Vibes", cursive; }
+  font-family: "Great Vibes", cursive;
+}
+
+.title-noivos {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 
 .ww-section {
-  padding: 100px 0; }
+  padding: 50px 0; }
 
 .btn-primary {
   color: #fff; }
 
 .btn-outline-primary:hover {
   color: #fff; }
+
+.events-container {
+  display: flex;
+  gap: 40px;
+  flex-direction: row;
+  margin-left: 15px;
+
+  .form-check-input {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    margin-left: -25px;
+  }
+}
+
+.location-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  flex-direction: row;
+  align-items: center;
+}
