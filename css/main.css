@@ -1,5 +1,6 @@
 body {
-  font-family: "Dosis", sans-serif;
+  font-family: "Dosis", sans-serif;  
+  background-color: white;
 }
 
 /* Home Page Style */
@@ -754,7 +755,8 @@ body {
     overflow-x: auto;
   }
 
-  .card-location {
+  .card-location {    
+    background-color: white;
     width: calc(100% - 40px);
     margin: 0 20px;
   }
@@ -873,7 +875,7 @@ body {
 .card-location {
   width: 100%;
   max-width: 1200px;
-  background: white;
+  background-color: white;
   color: black;
   border-radius: 0;
   z-index: 2;
