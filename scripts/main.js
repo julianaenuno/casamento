@@ -5,6 +5,26 @@ $(document).ready(function() {
     // uncomment below for on-scroll animations to played only once
     // once: true
   }); // initialize animate on scroll library
+
+  // Countdown Timer
+  function updateCountdown() {
+    const weddingDate = new Date('July 25, 2025').getTime();
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('days').innerHTML = `<span class="number">${days}</span><br><span class="label">dias</span>`;
+    document.getElementById('hours').innerHTML = `<span class="number">${hours}</span><br><span class="label">horas</span>`;
+    document.getElementById('minutes').innerHTML = `<span class="number">${minutes}</span><br><span class="label">minutos</span>`;
+    document.getElementById('seconds').innerHTML = `<span class="number">${seconds}</span><br><span class="label">segundos</span>`;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000); // Update every second
 });
 
 // Smooth scroll for links with hashes
