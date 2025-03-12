@@ -8,6 +8,15 @@ function sendEmail(event) {
   };
   console.log('parms', parms);
 
+  emailjs.send('service_r1gt9qt', 'template_2l7nq56', parms).then(
+    (response) => {
+      console.log('SUCCESS!', response.status, response.text);
+    },
+    (error) => {
+      console.log('FAILED...', error);
+    },
+  );
+
   // fetch('https://api.emailjs.com/api/v1.0/email/send', {
   //     method: 'POST',
   //     headers: {
