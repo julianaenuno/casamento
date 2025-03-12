@@ -35,6 +35,27 @@
       }
     </style>
   </noscript>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "8qg7okQzz9D-Ifk9D",
+      });
+    })();
+
+    function sendEmail(event) {
+      event.preventDefault();
+
+      let parms = {
+        name: document.getElementById('first-name').value,
+        value: document.getElementById('yes').checked ? 'Sim' : 'Não'
+      };
+
+      emailjs.send('service_prcr3b1', 'template_2l7nq56', parms)
+        .then(alert('Email enviado com sucesso!'));        
+    }
+  </script>
 </head>
 
 <body id="top">
@@ -51,8 +72,8 @@
             data-aos-duration="1000" alt="separator" />
           <p class="text-home-sub-subtitle" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000"
             data-aos-offset="10">Convidamos-te a celebrar connosco os nossos votos de casamento</p>
-          <p class="text-home-date date-rectangle" data-aos="zoom-in-down" data-aos-delay="300"
-            data-aos-duration="1000" data-aos-offset="10">25 Julho 2025</p>
+          <p class="text-home-date date-rectangle" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000"
+            data-aos-offset="10">25 Julho 2025</p>
         </div>
       </div>
     </div>
@@ -193,8 +214,10 @@
                       <h2 class="text-couple-subtitle-couple">Restaurante</h2>
                       <p class="text-couple-title-dark">Rua Nova do Fojo 238, 4400-232 Vila Nova de Gaia</p>
                       <p class="text-couple-title-dark">14h - 18h</p>
-                      <p class="text-couple-subtitle-couple-dark">O restaurante fica localizado na Rua Nova do Fojo, em Vila Nova de Gaia, o ambiente será perfeito para celebrar
-                        com amigos e familiares. Esperamos que todos possam se juntar a nós para desfrutar de momentos inesquecíveis, boa comida e muita alegria.</p>
+                      <p class="text-couple-subtitle-couple-dark">O restaurante fica localizado na Rua Nova do Fojo, em
+                        Vila Nova de Gaia, o ambiente será perfeito para celebrar
+                        com amigos e familiares. Esperamos que todos possam se juntar a nós para desfrutar de momentos
+                        inesquecíveis, boa comida e muita alegria.</p>
                     </div>
                   </div>
                 </div>
@@ -214,17 +237,20 @@
               <div class="titles-image">
                 <h1 class="text-couple-subtitle">Estás convidado</h1>
                 <img class="img-separator-home-black" src="images/separador-black.png" alt="separator" />
-                <p class="text-home-sub-subtitle-couple">Mal podemos esperar para comemorar nosso dia especial contigo</p>
-                </div>
-              <form action="https://formspree.io/f/xdkeopro" method="POST">
+                <p class="text-home-sub-subtitle-couple">Mal podemos esperar para comemorar nosso dia especial contigo
+                </p>
+              </div>
+              <form>
                 <div class="form-content">
                   <div class="form-container">
                     <div class="form-group">
-                      <input type="text" class="form-control custom-input" id="first-name" name="name" placeholder="Nome" required>
+                      <input type="text" class="form-control custom-input" id="first-name" name="name"
+                        placeholder="Nome">
                     </div>
                   </div>
                   <div class="form-container-check">
-                    <p class="text-home-sub-subtitle-couple text-home-sub-subtitle-couple-ckeck">Posso estar presente?</p>
+                    <p class="text-home-sub-subtitle-couple text-home-sub-subtitle-couple-ckeck">Posso estar presente?
+                    </p>
                     <div class="radio-container">
                       <input type="radio" name="attendance" id="yes" value="Sim" checked>
                       <label for="yes">Sim</label>
@@ -233,9 +259,7 @@
                       <label for="no">Não</label>
                     </div>
                   </div>
-                  <input type="hidden" name="_subject" value="Casamento Juliana e Nuno" />
-                  <input type="hidden" name="_next" value="https://nunoejuliana.github.io/casamento" />
-                  <button type="submit" class="date-rectangle-button-form">Enviar</button>
+                  <button type="submit" class="date-rectangle-button-form" onclick="sendEmail(event)">Enviar</button>
                 </div>
               </form>
             </div>
@@ -268,7 +292,7 @@
       });
     });
 
-    document.getElementById('attendanceToggle').addEventListener('change', function() {
+    document.getElementById('attendanceToggle').addEventListener('change', function () {
       document.getElementById('toggleLabel').textContent = this.checked ? 'Sim' : 'Não';
     });
   </script>
