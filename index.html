@@ -286,6 +286,7 @@
         body: formData,
       })
         .then((response) => {
+          console.log('response', response);
           if (response.ok) {
             document.getElementById("success-message").style.display = "block";
             form.style.display = "none";
