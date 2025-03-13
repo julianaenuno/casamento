@@ -99,7 +99,7 @@
                       <div class="card-body p-0">
                         <div class="couple-text-left">
                           <h2 class="text-couple-subtitle-couple text-left-couple">NUNO BERNARDO</h2>
-                          <p class="text-couple-title-dark text-left-couple">24.11.21987</p>
+                          <p class="text-couple-title-dark text-left-couple">24.11.1987</p>
                           <p class="text-couple-subtitle-couple-dark text-left-couple">Olá, eu sou Nuno. Desde que
                             conheci a Juliana, minha vida se encheu de alegria e amor.</p>
                         </div>
@@ -219,12 +219,12 @@
                 <p class="text-home-sub-subtitle-couple">Mal podemos esperar para comemorar nosso dia especial contigo
                 </p>
               </div>
-              <form id="contact-form" action="https://formsubmit.co/nberna_87@hotmail.com" method="POST">
+              <form id="contact-form" action="https://formsubmit.co/nuno.bernardo_87@hotmail.com" method="POST">
                 <div class="form-content">
                   <div class="form-container">
                     <div class="form-group">
-                      <input type="text" class="form-control custom-input" id="first-name" name="name"
-                        placeholder="Nome" required>
+                      <input type="text" class="form-control custom-input" id="first-name" name="name" placeholder="Nome" required>
+                      <span id="name-error" class="error-message" style="display:none; color:red;">Por favor, coloque o nome</span>
                     </div>
                   </div>
                   <div class="form-container-check">
@@ -280,6 +280,16 @@
       const form = document.getElementById("contact-form");
       const formMessage = document.getElementById("form-message");
       const formData = new FormData(form);
+      const name = formData.get("name");
+      const nameError = document.getElementById("name-error");
+
+      if (!name.trim()) {
+        nameError.style.display = "block";
+        return;
+      } else {
+        nameError.style.display = "none";
+      }
+
       fetch(form.action, {
         method: form.method,
         body: formData,
@@ -301,6 +311,13 @@
           }, 3000);
         });
     }
+
+    document.getElementById("first-name").addEventListener("input", function() {
+      const nameError = document.getElementById("name-error");
+      if (this.value.trim()) {
+        nameError.style.display = "none";
+      }
+    });
   </script>
 </body>
 
