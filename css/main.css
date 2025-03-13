@@ -683,7 +683,7 @@ body {
   background-color: rgba(255, 255, 255, 0);
   border-style: double;
   border-width: 4px;
-  border-color: rgba(167, 133, 86, 0.18);
+  border-color: rgb(211 182 141);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -759,7 +759,7 @@ body {
 
   .img-location {
     width: -webkit-fill-available;
-    height: -webkit-fill-available;
+    height: 225px;
     margin-bottom: 20px;
   }
 
@@ -835,7 +835,7 @@ body {
 }
 
 .section-timer {
-  background-color: #F4F0ED;
+  background-color: #f5ece5;
 }
 
 .map-container {
@@ -1095,7 +1095,7 @@ body {
   position: absolute;
   width: 75%;
   margin: 30px;
-  top: 60px;
+  top: 30px;
   color: white;
   padding: 15px;
   background-color: rgb(99 191 122);
@@ -1122,4 +1122,13 @@ body {
   100% {
     width: 100%;
   }
+}
+
+.sub-title-home {
+  margin: 30px;
+}
+
+.title-home {
+  bottom: -40px;
+  position: relative;
 }

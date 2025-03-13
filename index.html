@@ -43,13 +43,13 @@
     <div class="ww-home-page" id="home">
       <div class="ww-wedding-announcement d-flex align-items-center justify-content-start">
         <div class="container ww-announcement-container">
-          <h4 class="text-home-title" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000">CASAMENTO
+          <h4 class="text-home-title title-home" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000">CASAMENTO
             DE</h4>
           <h1 class="text-home-subtitle" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000">JULIANA
             & NUNO</h1>
           <img class="img-separator-home" src="images/separador.png" data-aos="zoom-in-down" data-aos-delay="300"
             data-aos-duration="1000" alt="separator" />
-          <p class="text-home-sub-subtitle" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000"
+          <p class="text-home-sub-subtitle sub-title-home" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000"
             data-aos-offset="10">Convidamos-te a celebrar connosco os nossos votos de casamento</p>
           <p class="text-home-date date-rectangle" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000"
             data-aos-offset="10">25 Julho 2025</p>
@@ -112,7 +112,7 @@
                   <div class="card-body p-0">
                     <div class="couple-text-left">
                       <h2 class="text-couple-subtitle-couple text-left-couple">NUNO BERNARDO</h2>
-                      <p class="text-couple-title-dark text-left-couple">24.11.21987</p>
+                      <p class="text-couple-title-dark text-left-couple">24.11.1987</p>
                       <p class="text-couple-subtitle-couple-dark text-left-couple">Olá, eu sou Nuno. Desde que conheci
                         a Juliana, minha vida se encheu
                         de alegria e amor.</p>
@@ -163,7 +163,7 @@
               <div class="card-location card shadow-none border-0 p-0">
                 <div class="card-body">
                   <div class="location-text">
-                    <img class="img-fluid img-location" src="images/tribunal.jpg" alt="Wedding Party" />
+                    <img class="img-fluid img-location" src="images/tribunal.png" alt="Wedding Party" />
                     <div class="text-location-container">
                       <h2 class="text-couple-subtitle-couple">Cerimónia</h2>
                       <p class="text-couple-title-dark">Rua Conselheiro Veloso da Cruz n.º 801, Palácio da Justiça,
@@ -238,7 +238,6 @@
                       <label for="no">Não</label>
                     </div>
                   </div>
-                  <!-- <input type="hidden" name="_next" value="https://nunoejuliana.github.io/casamento/"> -->
                   <input type="hidden" name="_captcha" value="false">
                   <button type="submit" class="date-rectangle-button-form" onclick="sendEmail(event)">Enviar</button>
                 </div>
@@ -288,6 +287,7 @@
         .then((response) => {
           formMessage.style.display = "block";
           formMessage.textContent = "Enviado com sucesso!";
+          form.reset();
           setTimeout(() => {
             formMessage.style.display = "none";
           }, 3000);
@@ -295,6 +295,7 @@
         .catch((error) => {
           formMessage.style.display = "block";
           formMessage.textContent = "Enviado com sucesso!";
+          form.reset();
           setTimeout(() => {
             formMessage.style.display = "none";
           }, 3000);
