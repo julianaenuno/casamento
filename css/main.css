@@ -44,7 +44,7 @@ body {
 }
 
 .date-rectangle {
-  background-color: rgb(167, 133, 86);
+  background-color: #88AB8E;;
   color: white;
   height: fit-content;
   width: fit-content;
@@ -70,7 +70,6 @@ body {
 
   .text-home-subtitle {
     font-size: 40px !important;
-    ;
   }
 
   .text-home-sub-subtitle {
@@ -265,9 +264,9 @@ body {
   .couple-text-right,
   .couple-text-left {
     align-items: center;
-    text-align: center;
-    margin: 30px 18px;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .card-couple-mobile {
@@ -284,16 +283,21 @@ body {
     margin-bottom: 20px;
   }
 
+  .text-couple-subtitle-white {
+    font-size: 30px !important;
+  }
+
   .text-home-sub-subtitle-couple {
-    text-align: center;
     font-size: 20px !important;
-    margin-bottom: 20px;
+  }
+
+  .text-home-sub-subtitle-couple-white {
+    font-size: 20px !important;
   }
 
   .text-couple-subtitle-couple {
-    text-align: center;
     font-size: 20px !important;
-    margin-bottom: 20px;
+    text-align: center;
   }
 
   .text-couple-title-dark {
@@ -309,7 +313,7 @@ body {
 
   .overlay-text {
     position: relative;
-    margin-bottom: 150px;
+    margin-bottom: 120px;
   }
 
   .img-separator-home-black {
@@ -317,14 +321,12 @@ body {
   }
  
   .titles-image {
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px !important;
+    gap: 5px !important;
   }
 
   .overlay-text .card-couple {
     position: absolute;
-    bottom: -140px;
+    bottom: -70px;
     width: calc(100% - 40px);
     margin: 0 20px;
     background: white;
@@ -338,15 +340,14 @@ body {
 
   .overlay-text .couple-text-right {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .img-couple {
     width: 100%;
     max-width: 100%;
-  }
-
-  .title-home {
-    bottom: -30px !important;
   }
 }
 
@@ -374,7 +375,7 @@ body {
 
   .ampersand {
     position: absolute;
-    background-color: rgb(167, 133, 86);
+    background-color: #88AB8E;;
     color: white;
     font-size: 50px;
     width: 70px;
@@ -401,6 +402,7 @@ body {
       justify-content: center;
       margin-right: 40px;
       width: 300px;
+      gap: 25px;
     }
 
     .couple-text-left {
@@ -410,6 +412,7 @@ body {
       justify-content: center;
       margin-left: 40px;
       width: 300px;
+      gap: 25px;
     }
   }
 
@@ -483,10 +486,22 @@ body {
 .text-couple-title-dark {
   color: #9B9B9B;
   font-family: "Muli", Sans-serif;
+  margin: 0;
 }
 
 .text-couple-subtitle {
   color: #4D504A;
+  font-family: "Cormorant Garamond", Sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.25em;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+.text-couple-subtitle-white {
+  color: #F2F1EB;
   font-family: "Cormorant Garamond", Sans-serif;
   font-size: 48px;
   font-weight: 400;
@@ -503,6 +518,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 3px;
+  margin: 0;
 }
 
 .text-couple-subtitle-couple-dark {
@@ -512,6 +528,7 @@ body {
   font-weight: 300;
   font-style: italic;
   color: #9B9B9B;
+  margin: 0;
 }
 
 .img-couple {
@@ -543,7 +560,17 @@ body {
   font-size: 26px;
   font-weight: 300;
   font-style: italic;
-  color: #9B9B9B;
+  color: #4D504A;
+  margin: 0;
+}
+
+.text-home-sub-subtitle-couple-white {
+  text-align: center;
+  font-family: "Cormorant Garamond", Sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  font-style: italic;
+  color: #F2F1EB;
   margin: 0;
 }
 
@@ -560,8 +587,6 @@ body {
 }
 
 .img-separator-home-black {
-  margin-bottom: 10px;
-  opacity: 0.4 !important;
   width: 180px;
 }
 
@@ -615,6 +640,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+  gap: 10px;
 }
 
 .img-separator {
@@ -687,7 +713,7 @@ body {
   background-color: rgba(255, 255, 255, 0);
   border-style: double;
   border-width: 4px;
-  border-color: rgb(211 182 141);
+  border-color: #576b5b;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -701,7 +727,7 @@ body {
 }
 
 .countdown-square .number {
-  color: #4D504A;
+  color: #F2F1EB;
   font-family: "Cormorant Garamond", Sans-serif;
   font-size: 50px;
   font-weight: 400;
@@ -711,7 +737,7 @@ body {
 
 .countdown-square .label {
   font-size: 15px;
-  color: #9B9B9B;
+  color: #F2F1EB;
   font-family: "Muli", Sans-serif;
 }
 
@@ -751,7 +777,7 @@ body {
   }
 
   .card-location .card-body {
-    padding: 20px !important;
+    padding: 10px !important;
   }
 
   .location-text {
@@ -782,7 +808,7 @@ body {
   }
 
   .section-localizacao {
-    height: 2350px !important
+    height: 2230px !important
   }
 
   .text-home-sub-subtitle-couple-ckeck {
@@ -798,6 +824,13 @@ body {
 
   .form-sucesso {
     width: 55% !important;
+  }
+
+  .text-location-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 }
 
@@ -825,6 +858,7 @@ body {
       flex-direction: column;
       align-items: flex-start;
       margin-right: 20px;
+      gap: 20px;
 
       .text-couple-subtitle-couple-dark {
         margin-bottom: 0px;
@@ -839,11 +873,11 @@ body {
 }
 
 .section-localizacao {
-  height: 2100px;
+  height: 1970px;
 }
 
 .section-timer {
-  background-color: #f5ece5;
+  background-color: #88AB8E;
 }
 
 .map-container {
@@ -857,7 +891,7 @@ body {
   width: 100%;
   height: 100%;
   border: 0;
-  filter: brightness(100%) contrast(100%) saturate(15%) blur(0px) hue-rotate(360deg);
+  filter: brightness(103%) contrast(100%) saturate(15%) blur(0px) hue-rotate(360deg);
 }
 
 .overlay-text-below {
@@ -894,7 +928,7 @@ body {
   height: 600px;
   border: 0;
   position: relative;
-  filter: brightness(100%) contrast(100%) saturate(15%) blur(0px) hue-rotate(360deg);
+  filter: brightness(103%) contrast(100%) saturate(15%) blur(0px) hue-rotate(360deg);
 }
 
 .restaurante-container {
@@ -947,7 +981,7 @@ body {
   background-color: #FFFFFF;
   border-style: solid;
   border-width: 1px;
-  border-color: rgba(167, 133, 86, 0.38);
+  border-color: #88AB8E;
   border-radius: 0;
   padding: 5px 15px;
   height: 50px;
@@ -981,7 +1015,7 @@ body {
 }
 
 .date-rectangle-button {
-  background-color: rgb(167, 133, 86);
+  background-color: #88AB8E;
   color: white;
   height: fit-content;
   width: fit-content;
@@ -1058,13 +1092,13 @@ body {
   
   label {
     position: relative;
-    color: rgb(167, 133, 86);
+    color: #88AB8E;;
     font-family: "Muli", sans-serif;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 0.8em;
-    border: 3px solid rgb(167, 133, 86);
+    border: 3px solid #88AB8E;;
     padding: 8px 23px;
   }
 
@@ -1076,18 +1110,18 @@ body {
     height: 15px;
     width: 15px;
     border: 0.45em solid #ffffff;
-    background-color: rgb(167, 133, 86);
+    background-color: #88AB8E;;
   }
   
   input[type="radio"]:checked + label {
-    background-color: rgb(167, 133, 86);
+    background-color: #88AB8E;;
     color: #ffffff;
   }
 }
 
 .date-rectangle-button-form {
   cursor: pointer;
-  background-color: rgb(167, 133, 86);
+  background-color: #88AB8E;;
   color: white;
   height: fit-content;
   width: fit-content;
@@ -1125,7 +1159,7 @@ body {
   left: 0;
   height: 5px;
   width: 0;
-  background-color: rgb(167, 133, 86);
+  background-color: #88AB8E;;
   animation: border-grow 3s linear forwards;
 }
 
@@ -1139,11 +1173,10 @@ body {
 }
 
 .sub-title-home {
-  margin: 30px;
+  margin: 0 30px;
 }
 
 .title-home {
-  bottom: -60px;
   position: relative;
 }
 
