@@ -9,6 +9,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500&amp;display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500&amp;display=swap"
     media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500&amp;display=swap" />
   </noscript>
@@ -35,6 +36,27 @@
       }
     </style>
   </noscript>
+  <style>
+    .spinner {
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      border-left-color: #000;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      animation: spin 1s linear infinite;
+      display: none;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 
 <body id="top">
@@ -43,14 +65,16 @@
     <div class="ww-home-page" id="home">
       <div class="ww-wedding-announcement d-flex align-items-center justify-content-start">
         <div class="container ww-announcement-container">
-          <div class="text-home-title title-home" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000">CASAMENTO
+          <div class="text-home-title title-home" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000">
+            CASAMENTO
             DE</div>
           <div class="text-home-subtitle" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000">JULIANA
             & NUNO</div>
           <img class="img-separator-home" src="images/separador.png" data-aos="zoom-in-down" data-aos-delay="300"
             data-aos-duration="1000" alt="separator" />
-          <p class="text-home-sub-subtitle sub-title-home" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000"
-            data-aos-offset="10">Convidamos-te a celebrar connosco os nossos votos de casamento</p>
+          <p class="text-home-sub-subtitle sub-title-home" data-aos="zoom-in-down" data-aos-delay="300"
+            data-aos-duration="1000" data-aos-offset="10">Convidamos-te a celebrar connosco os nossos votos de casamento
+          </p>
           <p class="text-home-date date-rectangle" data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="1000"
             data-aos-offset="10">25 Julho 2025</p>
         </div>
@@ -133,7 +157,8 @@
         <div class="titles-image">
           <div class="text-couple-subtitle-white">Vamos nos casar</div>
           <img class="img-separator-home-black" src="images/separador.png" alt="separator" />
-          <p class="text-home-sub-subtitle-couple-white">No dia 25 julho 2025 vai se realizar o nosso tão esperado casamento
+          <p class="text-home-sub-subtitle-couple-white">No dia 25 julho 2025 vai se realizar o nosso tão esperado
+            casamento
           </p>
         </div>
         <div id="countdown-timer" class="countdown-timer-display text-home-sub-subtitle-couple">
@@ -223,8 +248,10 @@
                 <div class="form-content">
                   <div class="form-container">
                     <div class="form-group">
-                      <input type="text" class="form-control custom-input" id="first-name" name="name" placeholder="Nome" required>
-                      <span id="name-error" class="error-message" style="display:none; color:red;">Por favor, coloque o nome</span>
+                      <input type="text" class="form-control custom-input" id="first-name" name="name"
+                        placeholder="Nome" required>
+                      <span id="name-error" class="error-message" style="display:none; color:red;">Por favor, coloque o
+                        nome</span>
                     </div>
                   </div>
                   <div class="form-container-check">
@@ -239,7 +266,10 @@
                     </div>
                   </div>
                   <input type="hidden" name="_captcha" value="false">
-                  <button type="submit" class="date-rectangle-button-form" onclick="sendEmail(event)">Enviar</button>
+                  <button type="submit" class="date-rectangle-button-form" onclick="sendEmail(event)">
+                    <span id="button-text">Enviar</span>
+                    <i id="button-spinner" class="fa fa-circle-o-notch fa-spin" style="display:none; color:white;"></i>
+                  </button>
                 </div>
               </form>
             </div>
@@ -279,6 +309,8 @@
 
       const form = document.getElementById("contact-form");
       const formMessage = document.getElementById("form-message");
+      const buttonText = document.getElementById("button-text");
+      const buttonSpinner = document.getElementById("button-spinner");
       const formData = new FormData(form);
       const name = formData.get("name");
       const nameError = document.getElementById("name-error");
@@ -290,11 +322,25 @@
         nameError.style.display = "none";
       }
 
+      buttonText.style.display = "none";
+      buttonSpinner.style.display = "inline-block";
+
+      buttonText.style.display = "inline-block";
+      buttonSpinner.style.display = "none";
+      formMessage.style.display = "block";
+      formMessage.textContent = "Enviado com sucesso!";
+      form.reset();
+      setTimeout(() => {
+        formMessage.style.display = "none";
+      }, 3000);
+
       fetch(form.action, {
         method: form.method,
         body: formData,
       })
         .then((response) => {
+          buttonText.style.display = "inline-block";
+          buttonSpinner.style.display = "none";
           formMessage.style.display = "block";
           formMessage.textContent = "Enviado com sucesso!";
           form.reset();
@@ -303,6 +349,8 @@
           }, 3000);
         })
         .catch((error) => {
+          buttonText.style.display = "inline-block";
+          buttonSpinner.style.display = "none";
           formMessage.style.display = "block";
           formMessage.textContent = "Enviado com sucesso!";
           form.reset();
@@ -312,7 +360,7 @@
         });
     }
 
-    document.getElementById("first-name").addEventListener("input", function() {
+    document.getElementById("first-name").addEventListener("input", function () {
       const nameError = document.getElementById("name-error");
       if (this.value.trim()) {
         nameError.style.display = "none";
