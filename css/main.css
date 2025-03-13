@@ -33,7 +33,6 @@ body {
   margin: 0 auto;
   height: 100%;
   color: #fff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
   letter-spacing: 2px;
   position: relative;
   z-index: 2;
@@ -533,7 +532,6 @@ body {
 
 .img-couple {
   width: 400px;
-  border-radius: 5px;
 }
 
 .text-home-subtitle {
@@ -713,7 +711,7 @@ body {
   background-color: rgba(255, 255, 255, 0);
   border-style: double;
   border-width: 4px;
-  border-color: #576b5b;
+  border-color: white;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -1146,7 +1144,7 @@ body {
   top: 20px;
   color: white;
   padding: 15px;
-  background-color: rgb(99 191 122);
+  background-color: #88AB8E;
   text-align: center;
   overflow: hidden;
   position: absolute;
@@ -1159,7 +1157,7 @@ body {
   left: 0;
   height: 5px;
   width: 0;
-  background-color: #88AB8E;;
+  background-color: #3f5242;
   animation: border-grow 3s linear forwards;
 }
 
