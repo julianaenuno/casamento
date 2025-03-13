@@ -710,9 +710,8 @@ body {
 .countdown-square {
   background-color: rgba(255, 255, 255, 0);
   border-style: double;
-  border-width: 4px;
+  border-width: 5px;
   border-color: white;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
