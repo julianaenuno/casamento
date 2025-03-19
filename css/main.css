@@ -43,7 +43,7 @@ body {
 }
 
 .date-rectangle {
-  background-color: #88AB8E;;
+  background-color: #3c6255;
   color: white;
   height: fit-content;
   width: fit-content;
@@ -64,6 +64,24 @@ body {
 
 @media (max-width: 767px) {
   .text-home-title {
+    font-size: smaller;
+  }
+
+  .custom-input {
+    font-size: smaller !important;
+  }
+
+  .radio-container {
+    label {
+      font-size: smaller !important;
+    }
+  }
+
+  .date-rectangle-button-form {
+    font-size: smaller !important;
+  }
+
+  .text-home-date {
     font-size: smaller;
   }
 
@@ -374,7 +392,7 @@ body {
 
   .ampersand {
     position: absolute;
-    background-color: #88AB8E;;
+    background-color: #3c6255;;
     color: white;
     font-size: 50px;
     width: 70px;
@@ -478,6 +496,11 @@ body {
 }
 
 .text-home-title {
+  color: white;
+  font-family: "Muli", Sans-serif;
+}
+
+.text-home-date {
   color: white;
   font-family: "Muli", Sans-serif;
 }
@@ -709,8 +732,8 @@ body {
 
 .countdown-square {
   background-color: rgba(255, 255, 255, 0);
-  border-style: double;
-  border-width: 5px;
+  border-style: dashed;
+  border-width: 1px;
   border-color: white;
   display: flex;
   flex-direction: column;
@@ -750,15 +773,15 @@ body {
   .countdown-square {
     width: 82px;
     height: 100px;
-    margin: 2px;
+    margin: 5px;
   }
 
   .countdown-square .number {
-    font-size: 20px;
+    font-size: 27px;
   }
 
   .countdown-square .label {
-    font-size: 8px;
+    font-size: 13px;
   }
 
   .countdown-timer-display {
@@ -874,7 +897,7 @@ body {
 }
 
 .section-timer {
-  background-color: #88AB8E;
+  background-color: #3c6255;
 }
 
 .map-container {
@@ -978,7 +1001,7 @@ body {
   background-color: #FFFFFF;
   border-style: solid;
   border-width: 1px;
-  border-color: #88AB8E;
+  border-color: #3c6255;
   border-radius: 0;
   padding: 5px 15px;
   height: 50px;
@@ -1012,7 +1035,7 @@ body {
 }
 
 .date-rectangle-button {
-  background-color: #88AB8E;
+  background-color: #3c6255;
   color: white;
   height: fit-content;
   width: fit-content;
@@ -1088,13 +1111,14 @@ body {
   
   label {
     position: relative;
-    color: #88AB8E;;
+    color: #3c6255;
     font-family: "Muli", sans-serif;
     cursor: pointer;
     display: inline-flex;
+    font-size: medium;
     align-items: center;
     gap: 0.8em;
-    border: 3px solid #88AB8E;;
+    border: 3px solid #3c6255;
     padding: 8px 23px;
   }
 
@@ -1106,23 +1130,23 @@ body {
     height: 15px;
     width: 15px;
     border: 0.45em solid #ffffff;
-    background-color: #88AB8E;;
+    background-color: #3c6255;
   }
   
   input[type="radio"]:checked + label {
-    background-color: #88AB8E;;
+    background-color: #3c6255;
     color: #ffffff;
   }
 }
 
 .date-rectangle-button-form {
   cursor: pointer;
-  background-color: #88AB8E;;
+  background-color: #3c6255;
   color: white;
   height: fit-content;
   width: fit-content;
   padding: 20px 40px;
-  font-size: larger;
+  font-size: medium;
   border: 0px;
   width: 100%;
   margin-top: 20px;
@@ -1142,7 +1166,7 @@ body {
   top: 20px;
   color: white;
   padding: 15px;
-  background-color: #88AB8E;
+  background-color: #3c6255;
   text-align: center;
   overflow: hidden;
   position: absolute;
