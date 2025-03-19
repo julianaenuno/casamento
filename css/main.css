@@ -534,7 +534,7 @@ body {
 }
 
 .text-couple-subtitle-couple {
-  color: #4D504A;
+  color: #3c6255;
   font-family: "Cormorant Garamond", Sans-serif;
   font-size: 28px;
   font-weight: 400;
@@ -756,7 +756,7 @@ body {
 }
 
 .countdown-square .label {
-  font-size: 15px;
+  font-size: 20px;
   color: #F2F1EB;
   font-family: "Muli", Sans-serif;
 }
@@ -1179,7 +1179,7 @@ body {
   left: 0;
   height: 5px;
   width: 0;
-  background-color: #3f5242;
+  background-color: #202921;
   animation: border-grow 3s linear forwards;
 }
 
