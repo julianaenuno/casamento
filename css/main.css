@@ -216,9 +216,9 @@ body {
 
 @media (max-width: 576px) {
 
-  .container {
+  /* .container {
     padding: 50px 0px 10px 0px !important;
-  }
+  } */
 
   .col-couple {
     padding: 0;
@@ -233,8 +233,12 @@ body {
     justify-content: center;
   }
 
-  .container {
+  .container-title {
     padding: 0px 0px 0px 0px !important;
+  }
+
+  .container {
+    padding: 50px 0px 10px 0px !important;
     max-width: none;
   }
 
@@ -778,6 +782,10 @@ body {
     margin: 5px;
   }
 
+  .ww-section {
+    padding: 0 !important;
+  }
+
   .countdown-square .number {
     font-size: 27px;
   }
@@ -830,7 +838,7 @@ body {
   }
 
   .section-localizacao {
-    height: 2230px !important
+    height: 2120px !important
   }
 
   .text-home-sub-subtitle-couple-ckeck {
