@@ -8,8 +8,6 @@ body {
   background: url("../images/nuju.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
-  /* min-height: 480px; */
-  /* max-height: 1080px; */
   position: relative;
   display: flex;
   justify-content: center;
